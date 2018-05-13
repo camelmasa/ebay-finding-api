@@ -1,9 +1,13 @@
-require "ebay/finding/api/version"
+require "json"
+require "faraday"
 
 module Ebay
   module Finding
     module Api
-      # Your code goes here...
     end
   end
 end
+
+require "ebay/finding/api/version"
+require "ebay/finding/api/client"
+require "ebay/finding/api/response"
