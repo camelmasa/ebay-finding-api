@@ -10,7 +10,11 @@ module Ebay::Finding::Api
     def items
       return [] unless success?
 
-      @items ||= JSON.parse(@response.body)["#{@key_name}Response"].first["searchResult"]
+      result = JSON.parse(@response.body)["#{@key_name}Response"].first["searchResult"].first
+
+      return [] if result["@count"] === "0"
+
+      @items ||= result["item"]
     end
 
     def success?
