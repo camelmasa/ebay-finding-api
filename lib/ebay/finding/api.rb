@@ -11,3 +11,4 @@ end
 require "ebay/finding/api/version"
 require "ebay/finding/api/client"
 require "ebay/finding/api/response"
+require "ebay/finding/api/error"
